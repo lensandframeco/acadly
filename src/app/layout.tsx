@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import CookieConsent from "@/components/layout/CookieConsent";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -8,9 +11,10 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Acadly — Secure Automated Classroom Attendance",
+  title: "Acadly — The Complete Teaching Platform",
   description:
-    "Automate classroom attendance with secure, frictionless check-ins. Save time, eliminate buddy-punching, and get real-time analytics.",
+    "The complete teaching platform for modern classrooms. Attendance, engagement, and learning — all in one place. Trusted by 200+ institutions.",
+  metadataBase: new URL("https://acadly.com"),
 };
 
 export default function RootLayout({
@@ -21,7 +25,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${geistSans.variable} font-sans antialiased`}>
-        {children}
+        <Navbar />
+        <main className="min-h-screen pt-[73px]">{children}</main>
+        <Footer />
+        <CookieConsent />
       </body>
     </html>
   );
