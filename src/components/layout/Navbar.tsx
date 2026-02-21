@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { NAV_ITEMS } from "@/lib/constants";
 import Button from "@/components/ui/Button";
+import Logo from "@/components/ui/Logo";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -13,9 +14,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 z-50 w-full border-b border-neutral-100 bg-white/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" className="text-xl font-bold text-navy">
-          Acadly
-        </Link>
+        <Logo />
 
         {/* Desktop nav */}
         <div className="hidden items-center gap-1 lg:flex">

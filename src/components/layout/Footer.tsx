@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FOOTER_COLUMNS, SOCIAL_LINKS } from "@/lib/constants";
+import Logo from "@/components/ui/Logo";
 
 export default function Footer() {
   return (
@@ -9,9 +10,7 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-6">
           {/* Brand column */}
           <div className="lg:col-span-2">
-            <Link href="/" className="text-xl font-bold text-white">
-              Acadly
-            </Link>
+            <Logo white />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-neutral-400">
               The complete teaching platform for modern classrooms. Attendance,
               engagement, and learning — all in one place.
